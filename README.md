@@ -1,7 +1,7 @@
 ###  动手
 
  *  MyGreeter 路径   app/src/main/java/com/dataspring/test/MyGreeter.kt
- *  测试类  MyGreeterTest 路径    src/test/java/com/dataspring/test/MyGreeterTest.kt
+ *  测试类  MyGreeterTest 路径    app/src/test/java/com/dataspring/test/MyGreeterTest.kt
 
 #### 思考
 * 是
