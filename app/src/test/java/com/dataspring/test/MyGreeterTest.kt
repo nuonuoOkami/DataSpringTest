@@ -30,7 +30,7 @@ class MyGreeterTest {
     }
 
     /**
-     * 测试是返回为is null or ""
+     * 判断返回是否为空
      */
     @Test
     fun testGreetingNonEmpty() {
@@ -42,20 +42,20 @@ class MyGreeterTest {
      * 测试边界 23:59
      */
     @Test
-    fun testGreetingAt2359ReturnsGoodEvening() {
+    fun testGreetingAt2359() {
         val fixedClock = createFixedClock(23, 59)
         greeter = MyGreeter(fixedClock)
-        assertEquals("Good evening", greeter.greeting())
+        assertEquals(TimeTags.EVENING, greeter.greeting())
     }
     /**
      * 测试边界
      *17:59
      */
     @Test
-    fun testGreetingAt1800ReturnsGoodEvening() {
+    fun testGreetingAt1759() {
         val fixedClock = createFixedClock(17, 59)
         greeter = MyGreeter(fixedClock)
-        assertEquals("Good evening", greeter.greeting())
+        assertEquals(TimeTags.AFTERNOON, greeter.greeting())
     }
     /**
      * 构建测试Clock

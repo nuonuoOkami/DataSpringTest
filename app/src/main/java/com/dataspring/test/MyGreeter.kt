@@ -11,9 +11,9 @@ class MyGreeter(private val clock: Clock = Clock.systemDefaultZone()) {
     fun greeting(): String {
         val hour = LocalTime.now(clock).hour
         return when (hour) {
-            in 6..11 -> "Good morning"
-            in 12..17 -> "Good afternoon"
-            else -> "Good evening"
+            in 6..11 -> TimeTags.MORNING
+            in 12..17 -> TimeTags.AFTERNOON
+            else -> TimeTags.EVENING
         }
     }
 }
